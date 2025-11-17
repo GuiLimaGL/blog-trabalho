@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Entre Nós — O que define nossas relações e comportamentos</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <svg class="logo" viewBox="0 0 64 64" width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3">
+          <path d="M10 30c0-8 6-14 14-14s14 6 14 14-6 14-14 14" />
+          <path d="M54 30c0 8-6 14-14 14S26 38 26 30s6-14 14-14" />
+          <path d="M22 12c0 4 4 8 10 8s10-4 10-8" />
+          <path d="M42 52c0-4-4-8-10-8s-10 4-10 8" />
+        </g>
+      </svg>
+
+      <div class="brand-text">
+        <h1>Entre Nós</h1>
+        <p class="tagline">O que define nossas relações e comportamentos</p>
+      </div>
+    </a>
+  </header>
+
+  <nav class="site-nav">
+    <a href="index.html">Início</a>
+      <a href="#" id="openSobreBtn">Sobre</a>
+    <button id="openLoginBtn" class="btn login-btn">Entrar</button>
+
+  </nav>
+
+  <main class="content">
+
+    <article>
+      <h2>Como as redes sociais moldam nosso comportamento</h2>
+      <p>Hoje, as redes sociais influenciam nossos hábitos e nossa forma de pensar.</p>
+      <a class="btn" href="post-redes-sociais.html">Ler mais</a>
+    </article>
+
+    <article>
+      <h2>O Retorno da Vida Simples em 2025</h2>
+      <p>Por que o minimalismo está reconquistando o mundo.</p>
+      <a class="btn" href="post-minimalismo.html">Ler mais</a>
+    </article>
+
+    <article>
+      <h2>Geração Z está redefinindo o sucesso em 2025</h2>
+      <p>Entenda como novos padrões estão transformando o mercado.</p>
+      <a class="btn" href="geracao.html">Ler mais</a>
+    </article>
+
+       <article>
+      <h2>O Impacto da Inteligência Artificial no Dia a Dia das Famílias em 2025</h2>
+      <p>Entenda como a tecnologia já faz parte da vida das famílias e para onde essa mudança está levando a sociedade.</p>
+      <a class="btn" href="ia-familias.html">Ler mais</a>
+    </article>
+
+      <article>
+      <h2>Como manter relacionamentos saudáveis em um mundo acelerado</h2>
+      <p>Ainda é possível criar vínculos saudáveis, mesmo com pouco tempo e muita pressão.</p>
+      <a class="btn" href="relacionamentos-saudaveis.html">Ler mais</a>
+    </article>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Entre Nós</h3>
+        <p>Reflexões sobre comportamento, sociedade e as relações humanas.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contato</h3>
+        <p>E-mail:<br><strong>suporte@entrenos.com</strong></p>
+      </div>
+    </div>
+
+    <p class="footer-copy">© 2025 Entre Nós</p>
+  </footer>
+
+  <!-- Modal Login -->
+  <div id="loginModal" class="login-modal">
+    <div class="login-panel">
+
+      <button class="close-btn" id="closeLoginBtn">✕</button>
+      <h2>Entrar no Entre Nós</h2>
+
+      <form id="loginForm" autocomplete="on" novalidate>
+        
+              <label>E-mail</label>
+              <input id="emailLogin" type="email" placeholder="email@exemplo.com" required>
+
+              <label>Senha</label>
+              <input id="senhaLogin" type="password" placeholder="••••••••" required>
+
+        <div class="form-row">
+          <label class="checkbox">
+            <input id="remember" type="checkbox"> Lembrar-me
+          </label>
+          <button type="submit" class="btn">Entrar</button>
+        </div>
+
+        <p id="loginError" class="form-error"></p>
+      </form>
+
+      <p class="small">
+        Não possui conta?  
+        <a id="openCadastro" href="#">Criar uma conta</a>
+      </p>
+
+    </div>
+  </div>
+
+  <!-- Modal de Cadastro -->
+<div id="cadastroModal" class="modal">
+  <div class="modal-content">
+    <span id="closeCadastroBtn" class="close">&times;</span>
+    <h2>Crie sua conta</h2>
+
+    <label>Nome</label>
+    <input id="cadNome" type="text" placeholder="Seu nome" required>
+
+    <label>E-mail</label>
+    <input id="cadEmail" type="email" placeholder="email@exemplo.com" required>
+
+    <label>Senha</label>
+    <input id="cadSenha" type="password" placeholder="••••••••" required>
+
+    <button id="cadastrarBtn" class="btn primary-btn">Cadastrar</button>
+  </div>
+</div>
+
+
+  <script src="login.js"></script>
+<script>
+  // Abrir modal de login
+  document.getElementById("openLogin").addEventListener("click", function() {
+    document.getElementById("loginModal").style.display = "flex";
+  });
+
+  // Fechar login
+  document.getElementById("closeLogin").addEventListener("click", function() {
+    document.getElementById("loginModal").style.display = "none";
+  });
+
+  // Abrir cadastro
+  document.getElementById("openCadastro").addEventListener("click", function(e) {
+    e.preventDefault();
+    document.getElementById("loginModal").style.display = "none";
+    document.getElementById("cadastroModal").style.display = "flex";
+  });
+
+  // Fechar cadastro
+  document.getElementById("closeCadastro").addEventListener("click", function() {
+    document.getElementById("cadastroModal").style.display = "none";
+  });
+</script>
+<!-- Modal Sobre -->
+<div id="sobreModal" class="modal">
+  <div class="modal-content">
+    <span id="closeSobreBtn" class="close">&times;</span>
+    <h2>Sobre o Entre Nós</h2>
+
+    <p>
+      O <strong>Entre Nós</strong> nasceu com a proposta de explorar como as relações humanas,
+      a tecnologia e os comportamentos sociais evoluem ao longo do tempo.
+      Trazemos reflexões baseadas em estudos modernos, tendências culturais,
+      mudanças comportamentais e o impacto da sociedade digital.
+    </p>
+
+    <p>
+      Nosso objetivo é criar um espaço de leitura leve e inteligente, onde
+      você possa compreender melhor o mundo ao seu redor — e a si mesmo.
+    </p>
+
+    <p>
+      Publicamos artigos sobre:
+      <ul>
+        <li>Comportamento humano</li>
+        <li>Tecnologia e sociedade</li>
+        <li>Tendências culturais</li>
+        <li>Mudanças de geração</li>
+        <li>Reflexões sobre o futuro</li>
+      </ul>
+    </p>
+
+    <p>
+      Seja bem-vindo(a) ao nosso espaço de ideias.
+    </p>
+  </div>
+</div>
+
+<script>
+  // --- MODAL SOBRE ---
+
+  const sobreModal = document.getElementById("sobreModal");
+  const openSobreBtn = document.getElementById("openSobreBtn");
+  const closeSobreBtn = document.getElementById("closeSobreBtn");
+
+  openSobreBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    sobreModal.style.display = "flex";
+  });
+
+  closeSobreBtn.addEventListener("click", function() {
+    sobreModal.style.display = "none";
+  });
+
+  window.addEventListener("click", function(e) {
+    if (e.target === sobreModal) {
+      sobreModal.style.display = "none";
+    }
+  });
+</script>
+
+</body>
+</html>
