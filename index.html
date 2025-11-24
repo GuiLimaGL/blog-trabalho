@@ -7,6 +7,69 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+        <style>
+      body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      }
+
+
+      .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+      }
+
+
+      .card {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transition: transform .2s ease, box-shadow .2s ease;
+      }
+
+
+      .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.10);
+      }
+
+
+      .card h2 {
+      margin-bottom: 10px;
+      font-size: 22px;
+      line-height: 1.3;
+      }
+
+
+      .card p {
+      margin-bottom: 20px;
+      color: #555;
+      font-size: 16px;
+      }
+
+
+      .btn {
+      background: #007bff;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background .2s;
+      font-weight: bold;
+      }
+
+
+      .btn:hover {
+      background: #0056c7;
+      }
+      </style>
 </head>
 <body>
 
@@ -34,39 +97,52 @@
     <button id="openLoginBtn" class="btn login-btn">Entrar</button>
 
   </nav>
+<main class="content">
 
-  <main class="content">
 
-    <article>
-      <h2>Como as redes sociais moldam nosso comportamento</h2>
-      <p>Hoje, as redes sociais influenciam nossos hábitos e nossa forma de pensar.</p>
-      <a class="btn" href="post-redes-sociais.html">Ler mais</a>
-    </article>
+    <div class="card">
+    <h2>Como as redes sociais moldam nosso comportamento</h2>
+    <p>Hoje, as redes sociais influenciam nossos hábitos e nossa forma de pensar.</p>
+    <a class="btn" href="post-redes-sociais.html">Ler mais →</a>
+    </div>
 
-    <article>
-      <h2>O Retorno da Vida Simples em 2025</h2>
-      <p>Por que o minimalismo está reconquistando o mundo.</p>
-      <a class="btn" href="post-minimalismo.html">Ler mais</a>
-    </article>
 
-    <article>
-      <h2>Geração Z está redefinindo o sucesso em 2025</h2>
-      <p>Entenda como novos padrões estão transformando o mercado.</p>
-      <a class="btn" href="geracao.html">Ler mais</a>
-    </article>
+    <div class="card">
+    <h2>O Retorno da Vida Simples em 2025</h2>
+    <p>Por que o minimalismo está reconquistando o mundo.</p>
+    <a class="btn" href="post-minimalismo.html">Ler mais →</a>
+    </div>
 
-       <article>
-      <h2>O Impacto da Inteligência Artificial no Dia a Dia das Famílias em 2025</h2>
-      <p>Entenda como a tecnologia já faz parte da vida das famílias e para onde essa mudança está levando a sociedade.</p>
-      <a class="btn" href="ia-familias.html">Ler mais</a>
-    </article>
 
-      <article>
-      <h2>Como manter relacionamentos saudáveis em um mundo acelerado</h2>
-      <p>Ainda é possível criar vínculos saudáveis, mesmo com pouco tempo e muita pressão.</p>
-      <a class="btn" href="relacionamentos-saudaveis.html">Ler mais</a>
-    </article>
+    <div class="card">
+    <h2>Geração Z está redefinindo o sucesso em 2025</h2>
+    <p>Entenda como novos padrões estão transformando o mercado.</p>
+    <a class="btn" href="geracao.html">Ler mais →</a>
+    </div>
 
+
+    <div class="card">
+    <h2>O Impacto da Inteligência Artificial no Dia a Dia das Famílias em 2025</h2>
+    <p>Entenda como a tecnologia já faz parte da vida das famílias.</p>
+    <a class="btn" href="ia-familias.html">Ler mais →</a>
+    </div>
+
+
+    <div class="card">
+    <h2>Como manter relacionamentos saudáveis em um mundo acelerado</h2>
+    <p>Ainda é possível criar vínculos saudáveis, mesmo com pouco tempo.</p>
+    <a class="btn" href="relacionamentos-saudaveis.html">Ler mais →</a>
+    </div>
+
+    
+    <div class="card">
+    <h2>Como Nossos Hábitos Moldam Nossa Identidade Sem Percebermos</h2>
+    <p>Descubra como os pequenos hábitos do dia a dia constroem silenciosamente quem somos, influenciam nossas escolhas e definem nossa identidade.</p>
+    <a class="btn" href="habitos.html">Ler mais →</a>
+    </div>
+
+
+</main>
   </main>
 
   <footer class="site-footer">
